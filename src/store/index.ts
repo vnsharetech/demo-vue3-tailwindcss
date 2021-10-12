@@ -5,12 +5,12 @@ const state = {
 };
 
 const mutations = {
-  setSum(state, payload) {
+  setSum(state: any, payload: any) {
     state.sum = payload;
   },
 };
 const actions = {
-  setSum(context, payload) {
+  setSum(context: any, payload: any) {
     console.log(payload);
     context.commit("setSum", payload);
   },
