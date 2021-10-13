@@ -60,7 +60,7 @@ export default {
     const store = useStore();
     const a = ref("0");
     const b = ref("0");
-    const sum = computed(() => {
+    const sum = computed<number>(() => {
       return store.state.sum;
     });
 
@@ -68,11 +68,11 @@ export default {
       store.dispatch("setSum", parseInt(a.value) + parseInt(b.value));
     };
 
-    const onInputA = (e) => {
+    const onInputA = (e: any) => {
       a.value = e.target.value;
     };
 
-    const onInputB = (e) => {
+    const onInputB = (e: any) => {
       b.value = e.target.value;
     };
 
